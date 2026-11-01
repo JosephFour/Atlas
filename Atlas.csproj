@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AssemblyName>Atlas</AssemblyName>
+    <RootNamespace>Atlas</RootNamespace>
+    <Version>2.3.0</Version>
+    <Product>Atlas</Product>
+    <Description>Atlas — запись повторов</Description>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Assets\atlas.ico</ApplicationIcon>
+    <SatelliteResourceLanguages>none</SatelliteResourceLanguages>
+    <!-- No designer is used; controls are built in code. -->
+    <NoWarn>$(NoWarn);WFO1000</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="ffmpeg\ffmpeg.exe" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" Link="ffmpeg\ffmpeg.exe" Condition="Exists('ffmpeg\ffmpeg.exe')" />
+    <None Include="ffmpeg\LICENSE.txt" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" Link="ffmpeg\LICENSE.txt" Condition="Exists('ffmpeg\LICENSE.txt')" />
+  </ItemGroup>
+
+</Project>

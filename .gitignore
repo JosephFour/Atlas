@@ -1,0 +1,10 @@
+bin/
+obj/
+publish/
+release/
+.vs/
+*.user
+*.suo
+
+# ffmpeg binaries are shipped in the release zip, not in git (165 MB > GitHub's file limit)
+ffmpeg/*.exe
